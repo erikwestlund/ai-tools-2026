@@ -1790,6 +1790,18 @@ Erik Westlund, PhD
 </ul>
 <p>If you do not use R, run <code>git pull</code> and create your own files in <code>practice/work/</code>.</p>
 </section>
+<section id="computing-check-up" class="slide level2 center">
+<h2>Computing Check-Up</h2>
+<ol type="1">
+<li class="fragment">From the course project root, run <code>source(&quot;updater.R&quot;)</code>.</li>
+<li class="fragment">Find <code>practice/tasks/00_open-project-and-glimpse/</code>.</li>
+<li class="fragment">Open <code>open-project-and-glimpse.Rproj</code> in RStudio or <code>open-project-and-glimpse.code-workspace</code> in Positron.</li>
+<li class="fragment">Open <code>starter-notebook.qmd</code>.</li>
+<li class="fragment">Use the prompt in <code>practice/prompts/00_open-project-and-glimpse/starter-prompt.txt</code>.</li>
+<li class="fragment">Read <code>data/project_check.csv</code>, run <code>dplyr::glimpse()</code>, and render the notebook.</li>
+</ol>
+<p>Stop there. This task only checks that the project root and local data paths work.</p>
+</section>
 <section id="if-the-updater-fails" class="slide level2 center">
 <h2>If the Updater Fails</h2>
 <p><strong>If you edit files outside <code>practice/work/</code> the updater may fail.</strong></p>
@@ -1839,7 +1851,7 @@ Erik Westlund, PhD
 <li class="fragment">Data and codebook are inside that folder’s <code>data/</code> directory.</li>
 <li class="fragment">Prompts and instructions are outside the task folder in <code>practice/prompts/01_clean-and-visualize/</code>.</li>
 <li class="fragment">Paste the prompt into the agent; do not put prompt files inside the project folder.</li>
-<li class="fragment">Use <code>starter-notebook.qmd</code> if you want an R/Quarto starting point.</li>
+<li class="fragment">Use the empty phase notebooks: <code>01_data-cleaning.qmd</code>, <code>02_data-summary.qmd</code>, and <code>03_data-analysis.qmd</code>.</li>
 </ul>
 <p>The task folder contains the working files. The prompt/checklist folder contains instructor instructions.</p>
 </section>
