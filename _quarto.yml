@@ -1,0 +1,11 @@
+project:
+  type: default
+  execute-dir: project
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    embed-resources: true
+    highlight-style: github
