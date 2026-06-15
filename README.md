@@ -22,6 +22,8 @@ This repository contains the public course materials for AI Tools for Data Scien
 - `practice/prompts/`: prompts and instructions kept outside task project folders.
 - `practice/work/`: your own local work area.
 
+When doing a practice task, open that task's `.Rproj` file in RStudio or that task's `.code-workspace` file in Positron. This makes the task folder the local project root while keeping prompts outside the agent context.
+
 ## Updating Course Materials
 
 If you are using R or RStudio, run this at the start of each class from the course project root:
