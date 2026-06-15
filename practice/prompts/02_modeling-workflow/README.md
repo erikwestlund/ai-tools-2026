@@ -1,13 +1,17 @@
 # Practice Task 02: Modeling Workflow
 
+Open `practice/tasks/02_modeling-workflow/`, or the matching folder copied into `practice/work/`, as the project for your agent tool. For security, only open the folder you are actively working in.
+
 ## Goal
 
-Use an AI agent to help build, run, and review a modeling workflow on simulated maternal-health data.
+Use an AI agent to help build, run, and review a modeling workflow on maternal-health data.
 
 ## Data
 
-- Dataset: `data/synthetic/simulated_maternal_health_data.csv`
-- Work area: `practice/work/`
+Use the files inside that task folder:
+
+- `data/maternal_health_data.csv`
+- `data/codebook.md`
 
 ## Task
 
@@ -31,16 +35,13 @@ Create an analysis that:
 
 ## Guardrails
 
-- Save your own work in `practice/work/`.
-- Do not edit files in `practice/tasks/` directly.
-- Use `skills/matter-of-fact-language.md` for writing style.
 - Do not make causal claims.
-- Treat the dataset as simulated teaching data.
 - Ask the agent to work in steps rather than writing the full analysis at once.
+- Paste the prompt into the agent rather than placing the prompt file in the task folder.
 
 ## Suggested Workflow
 
-1. Create a new notebook or script in `practice/work/`.
+1. Open only the task folder, or its copy in `practice/work/`, in your agent tool.
 2. Start with `starter-prompt.txt`.
 3. Ask the agent for a plan before code.
 4. Run each code section.

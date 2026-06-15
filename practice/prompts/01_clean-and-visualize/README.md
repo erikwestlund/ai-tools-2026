@@ -1,15 +1,15 @@
 # Practice Task 1: Clean And Visualize
 
-Read this task folder for instructions. Create your own notebook, script, or notes in `practice/work/` before editing or adding work.
+Open `practice/tasks/01_clean-and-visualize/`, or the matching folder copied into `practice/work/`, as the project for your agent tool. For security, only open the folder you are actively working in.
 
 ## Dataset
 
-Use:
+Use the files inside that task folder:
 
-- `data/simulated/county_wellness_indicators_long.csv`
-- `data/codebooks/simulated_county_wellness_indicators_long.md`
+- `data/county_wellness_indicators_long.csv`
+- `data/codebook.md`
 
-Each row is one simulated county-measure estimate.
+Each row is one county-measure estimate.
 
 ## Goal
 
@@ -26,15 +26,15 @@ Use an AI tool to help clean, summarize, and visualize the dataset.
 
 ## Prompt File
 
-Start with `starter-prompt.txt`, then revise it for your tool and your own question.
+Start with `starter-prompt.txt`, then revise it for your tool and your own question. Paste the prompt into the agent rather than placing the prompt file in the task folder.
 
 ## Starter Notebook
 
-Use `starter-notebook.qmd` if you want a Quarto/R starting point. If you use a different analysis method, language, or tool, set up a workable file for that method and make sure it can load the data from the course repository.
+Use `starter-notebook.qmd` in the task folder if you want a Quarto/R starting point. If you use a different analysis method, language, or tool, set up a workable file for that method and make sure it can load the local files in `data/`.
 
 ## What To Check
 
-- Does the code run from the course repository root?
+- Does the code run from the task folder?
 - Are numeric columns treated as numeric?
 - Does the plot use the intended unit of observation?
 - Are labels and captions clear?

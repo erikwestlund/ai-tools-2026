@@ -17,6 +17,8 @@ data/private/
 practice/*
 !practice/tasks/
 !practice/tasks/**
+!practice/prompts/
+!practice/prompts/**
 !practice/work/
 practice/work/*
 !practice/work/.gitkeep

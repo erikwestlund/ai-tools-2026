@@ -1,0 +1,22 @@
+We're analyzing the data in `data/`.
+
+Files:
+- data/subgroup_estimates.csv
+- data/codebook.md
+
+First, inspect the csv and codebook. Tell me:
+- what one row represents
+- what needs cleaning before summaries or plots
+- what checks you would run
+- what files you would write to outputs/
+
+Do not write the full analysis yet. After that, write R code to clean the data.
+
+Requirements:
+- use simple R code or common tidyverse functions
+- make column names syntactic and consistent
+- check the estimate field before converting it to a numeric value
+- preserve unavailable estimates explicitly
+- check categorical fields for values that should be cleaned before summarizing
+- print checks showing what changed
+- save outputs in outputs/ using explicit file paths

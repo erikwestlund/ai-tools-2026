@@ -1793,7 +1793,7 @@ Erik Westlund, PhD
 <h2>Note</h2>
 <ul>
 <li class="fragment">I am demoing in Positron, which behaves similarly to RStudio.</li>
-<li class="fragment">Code depends on opening this repository as a project.</li>
+<li class="fragment">Code depends on opening the right folder as a project.</li>
 <li class="fragment">You can follow along if you do this.</li>
 </ul>
 </section>
@@ -1801,8 +1801,9 @@ Erik Westlund, PhD
 <h2>Instructor Demo</h2>
 <p>We will use the <a href="../modules/01_agent-demo/01_data-cleaning.qmd">First Agent Demo</a> in the repository:</p>
 <ul>
-<li class="fragment">Dataset: <code>data/simulated/prams_messy_for_cleaning.csv</code>.</li>
-<li class="fragment">Prompt: <code>modules/01_agent-demo/prompt.txt</code>.</li>
+<li class="fragment">Open only <code>modules/01_agent-demo/</code> in the agent tool.</li>
+<li class="fragment">Data and codebook are inside that folder’s <code>data/</code> directory.</li>
+<li class="fragment">Prompts are outside the demo folder in <code>modules/prompts/01-agent-demo/</code>.</li>
 <li class="fragment">Goal: use an AI agent to tackle an analysis task.</li>
 <li class="fragment">We will go step by step, checking each stage before moving on.</li>
 </ul>
@@ -1819,14 +1820,16 @@ Erik Westlund, PhD
 </section>
 <section id="data-visualization-practice" class="slide level2 center">
 <h2>Data Visualization Practice</h2>
-<p>Start in <code>practice/work/</code>.</p>
-<p>Use <a href="../practice/tasks/01_clean-and-visualize/">Practice Task 1</a>:</p>
+<p>Open only the project folder you are working in with your agent tool.</p>
+<p>Security reason: an agent can inspect files in the folder you give it. Do not open a larger folder than needed.</p>
+<p>Use <a href="../practice/tasks/01_clean-and-visualize/">Practice Task 1</a> or the matching copy in <code>practice/work/</code>:</p>
 <ul>
-<li class="fragment"><code>data/simulated/county_wellness_indicators_long.csv</code>.</li>
-<li class="fragment"><code>data/codebooks/simulated_county_wellness_indicators_long.md</code>.</li>
-<li class="fragment">starter prompt: <code>practice/tasks/01_clean-and-visualize/starter-prompt.txt</code>.</li>
+<li class="fragment">Data and codebook are inside that folder’s <code>data/</code> directory.</li>
+<li class="fragment">Prompts and instructions are outside the task folder in <code>practice/prompts/01_clean-and-visualize/</code>.</li>
+<li class="fragment">Paste the prompt into the agent; do not put prompt files inside the project folder.</li>
+<li class="fragment">Use <code>starter-notebook.qmd</code> if you want an R/Quarto starting point.</li>
 </ul>
-<p>The prompt and detailed checklist live in the practice task folder, not in these slides.</p>
+<p>The task folder contains the working files. The prompt/checklist folder contains instructor instructions.</p>
 </section>
 <section id="wrap-up" class="slide level2 center">
 <h2>Wrap-Up</h2>

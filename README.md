@@ -18,7 +18,8 @@ This repository contains the public course materials for AI Tools for Data Scien
 - `assignments/`: rendered assignment pages.
 - `data/`: public and synthetic teaching datasets.
 - `skills/`: reusable agent guidance used by modules and practice tasks.
-- `practice/tasks/`: instructor-provided practice tasks that update with `git pull`.
+- `practice/tasks/`: project folders for practice work.
+- `practice/prompts/`: prompts and instructions kept outside task project folders.
 - `practice/work/`: your own local work area.
 
 ## Updating Course Materials

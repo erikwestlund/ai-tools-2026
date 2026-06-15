@@ -1,9 +1,10 @@
-I am working in the course repository for AI Tools for Data Science and Statistics.
+I am working on a modeling workflow in this project folder.
 
-Dataset: data/synthetic/simulated_maternal_health_data.csv
-Language guidance: skills/matter-of-fact-language.md
+Files:
+- data/maternal_health_data.csv
+- data/codebook.md
 
-Goal: create a reproducible modeling workflow for a simulated maternal-health dataset.
+Goal: create a reproducible modeling workflow for the maternal-health dataset.
 
 Please work step by step. First inspect the dataset and propose a plan. Do not write the full analysis yet.
 
