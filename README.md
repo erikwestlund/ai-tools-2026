@@ -14,7 +14,8 @@ This repository contains the public course materials for AI Tools for Data Scien
 
 - `index.html`: rendered course website.
 - `syllabus.html` and `git-workflow.html`: course information and update instructions.
-- `modules/` and `assignments/`: rendered course materials.
+- `modules/`: Quarto source notebooks and task materials.
+- `assignments/`: rendered assignment pages.
 - `data/`: public and synthetic teaching datasets.
 - `skills/`: reusable agent guidance used by modules and practice tasks.
 - `practice/tasks/`: instructor-provided practice tasks that update with `git pull`.
