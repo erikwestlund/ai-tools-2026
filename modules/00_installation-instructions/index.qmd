@@ -1,5 +1,5 @@
 ---
-title: "Pre-Class Setup Checklist"
+title: "Installation Instructions"
 subtitle: "AI Tools for Data Science and Statistics"
 format:
   html:
