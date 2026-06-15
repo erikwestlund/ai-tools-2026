@@ -6,6 +6,4 @@ Please produce:
 - mean, minimum, and maximum estimate by measure
 - a short interpretation of what these summaries show
 
-Do not make causal claims.
-
-Save any summary tables in outputs/ using explicit file paths.
+Save any summary tables in outputs/

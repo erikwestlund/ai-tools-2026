@@ -1,49 +1,7 @@
 ---
 title: "Subgroup Estimate Analysis: Data Summary"
-subtitle: "Step 2 of 3"
 format:
   html:
     embed-resources: true
     toc: true
 ---
-
-# Objective
-
-Summarize the cleaned subgroup estimate data and verify that the summaries match the dataset structure.
-
-# Files
-
-- Dataset: `data/subgroup_estimates.csv`
-- Codebook: `data/codebook.md`
-- Prompt: `../prompts/01-agent-demo/02-summarize.txt`
-- Outputs: `outputs/`
-
-# Output Directory
-
-This analysis reads and writes derived files under `outputs/`. Code should use explicit paths to that folder. The `.gitkeep` file only keeps the folder present when it is empty.
-
-Use a setup like this when running from this folder:
-
-```{r}
-#| eval: false
-output_dir <- "outputs"
-cleaned_data_path <- file.path(output_dir, "subgroup_estimates_cleaned.csv")
-summary_path <- file.path(output_dir, "summary_by_measure.csv")
-```
-
-# Analysis Request
-
-Once the cleaning code looks reasonable, use `../prompts/01-agent-demo/02-summarize.txt`. The prompt file is outside this folder so it is not part of the agent's working context unless you paste it.
-
-# Checks
-
-Before moving to the analysis notebook, check:
-
-- whether unavailable estimates were handled correctly in numeric summaries
-- whether grouped summaries use the intended columns
-- whether the interpretation stays close to the displayed numbers
-- whether the summary suggests a reasonable focused plot
-
-# Next Notebook
-
-After the summaries look reasonable, continue to `03_data-analysis.qmd`.

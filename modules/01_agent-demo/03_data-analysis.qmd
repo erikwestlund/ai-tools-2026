@@ -1,52 +1,7 @@
 ---
 title: "Subgroup Estimate Analysis: Data Analysis"
-subtitle: "Step 3 of 3"
 format:
   html:
     embed-resources: true
     toc: true
 ---
-
-# Objective
-
-Create one small analysis and one readable visualization from the cleaned subgroup estimate data.
-
-# Files
-
-- Dataset: `data/subgroup_estimates.csv`
-- Codebook: `data/codebook.md`
-- Prompt: `../prompts/01-agent-demo/03-analyze-and-plot.txt`
-- Outputs: `outputs/`
-
-# Output Directory
-
-This analysis reads and writes derived files under `outputs/`. Code should use explicit paths to that folder. The `.gitkeep` file only keeps the folder present when it is empty.
-
-Use a setup like this when running from this folder:
-
-```{r}
-#| eval: false
-output_dir <- "outputs"
-cleaned_data_path <- file.path(output_dir, "subgroup_estimates_cleaned.csv")
-plot_path <- file.path(output_dir, "subgroup_estimates_plot.png")
-```
-
-# Analysis Request
-
-Use `../prompts/01-agent-demo/03-analyze-and-plot.txt` to ask for one small analysis, not a complete report. The prompt file is outside this folder so it is not part of the agent's working context unless you paste it.
-
-# Checks
-
-Before trusting the result, check:
-
-- whether the plot uses the cleaned numeric estimate
-- whether labels match the dataset
-- whether the interpretation avoids overclaiming from pre-aggregated data
-- whether the code or output should be simplified before reuse
-
-# Analysis Notes
-
-- Ask for one stage at a time.
-- Check the data after each stage.
-- Verify the statistical meaning before trusting generated code or interpretation.
-- Keep generated outputs in `outputs/`.
