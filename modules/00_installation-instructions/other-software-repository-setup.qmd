@@ -8,13 +8,7 @@ format:
     toc-depth: 3
 ---
 
-# Goal
-
 Use this walkthrough if you are not using RStudio, Positron, or VS Code as your main editor.
-
-Examples include Stata, SAS, SPSS, a plain text editor, or a command-line agent workflow such as Codex CLI or Claude Code.
-
-The main difference is that you will manage the course repository from a terminal.
 
 # What You Need
 
@@ -53,11 +47,11 @@ After installing Git, close and reopen PowerShell, then run:
 git --version
 ```
 
-If this still fails, restart your computer. If it still fails after restarting, Git is not on your PATH and you should ask for help.
+If this still fails, restart your computer. If it still fails after restarting, Git is not on your PATH. [The second answer on this StackOverflow Post](https://stackoverflow.com/questions/26620312/git-installing-git-in-path-with-github-client-for-windows) provides a good tutorial on how to fix the PATH issue.
 
-## Choose A Simple Folder Path
+## Choose A Directory For Course Materials
 
-Use a simple folder for the course repository. For example:
+Pick a folder for the course repository. For example:
 
 ```text
 C:\Users\yourname\Code
@@ -117,6 +111,8 @@ If you are not using R, update from the terminal:
 git pull --ff-only
 ```
 
+**Note:** The updater.R provides other benefits than pull, such as handling file conflicts, and scaffolding out practice examples.
+
 If you are using R from any editor or terminal, you can instead run this from the course repository root:
 
 ```r
@@ -149,7 +145,7 @@ practice/work/
 
 If you use a CLI agent such as Codex CLI or Claude Code, open the terminal in only the copied work folder assigned for the task.
 
-For Day 2, use:
+For example, to finish the 2nd practice:
 
 ```bash
 cd practice/work/02_table-and-visualization
@@ -171,6 +167,8 @@ If you render from a terminal, first move into the assigned folder:
 cd practice/work/02_table-and-visualization
 quarto render 01_table-and-visualization.qmd
 ```
+
+Note that if you want to use Quarto, you will need to install Quarto manually if you are not using RStudio or Positron.
 
 # Quick Check
 

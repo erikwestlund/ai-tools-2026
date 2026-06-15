@@ -8,11 +8,11 @@ format:
     toc-depth: 3
 ---
 
-# Goal
-
 This walkthrough gets the course repository onto your computer using Positron or VS Code, then explains the project files that keep paths and rendering behavior predictable.
 
-Use this if you are using Positron or VS Code for the course. The screenshots show Positron, but the workflow is the same in VS Code.
+If you do not have either of these editors and want to go this route, pick Positron for data science/statistics workflows. VS Code is a good option for people who already use VS Code and do not need all of Positron's data science add-ons.
+
+The screenshots show Positron, but the workflow is the same in VS Code.
 
 # Step 1: Start From Positron Or VS Code
 
