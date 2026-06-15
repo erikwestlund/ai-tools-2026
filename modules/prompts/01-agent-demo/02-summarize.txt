@@ -7,3 +7,5 @@ Please produce:
 - a short interpretation of what these summaries show
 
 Save any summary tables in outputs/
+
+Create a notebook in 02_data-summary.qmd

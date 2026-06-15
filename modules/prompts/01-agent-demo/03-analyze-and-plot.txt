@@ -7,3 +7,5 @@ Use a plot that is easy to read in a short analysis report.
 Include a brief interpretation and limitations.
 
 Save the plot in outputs/ using an explicit file path.
+
+Create a summary notebook in 03_data-analysis.qmd.

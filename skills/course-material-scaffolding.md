@@ -7,8 +7,6 @@ Use this guidance when creating or revising modules, demos, and practice tasks f
 - Scaffold work for students to complete with AI tools; do not complete the analysis when the learning goal is to show how agentic AI works.
 - Keep project folders clean for agent context. A folder opened in an agent should contain only the files the agent should inspect or edit.
 - Put prompts and task instructions outside the project folder that students open with an agent.
-- Prefer realistic, applied practice over toy examples. Use plausible data, ordinary messiness, and clear analysis goals.
-- Use public, synthetic, or simulated data only. Do not add private, restricted, or sensitive data.
 
 ## Module Idioms
 
@@ -16,8 +14,7 @@ Use this guidance when creating or revising modules, demos, and practice tasks f
 - Put demo prompts under `modules/prompts/<module-name>/`.
 - Make demo folders self-contained with local `data/`, local codebooks, starter notebooks, and `outputs/.gitkeep` when outputs are expected.
 - Do not put `prompt.txt`, prompt READMEs, or skill files inside the demo project folder unless the point of the demo is to show agent context behavior.
-- Leave meaningful gaps in starter notebooks so the agent interaction does real work during class.
-- If a module is a comparison or context-management exercise, make the contrast explicit and keep the files minimal.
+- Starter notebooks should be as empty as possible.
 
 ## Practice Idioms
 
