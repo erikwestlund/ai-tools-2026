@@ -84,8 +84,10 @@ Install at least one agent-capable tool. Follow the official installation instru
 - GitHub Copilot: <https://docs.github.com/en/copilot>
 - GitHub Copilot for VS Code: <https://marketplace.visualstudio.com/items?itemName=GitHub.copilot>
 - GitHub Copilot Chat for VS Code: <https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat>
+- Posit AI: <https://posit.ai/>
+- Posit AI setup guide: <https://docs.posit.co/posit-ai/user/getting-started/>
 
-If you already use RStudio, Stata, SAS, or another statistics program, a CLI agent such as Claude Code, Codex CLI, or Gemini CLI is a good companion. If you already use VS Code or Positron, GitHub Copilot Agent Mode or another editor-based agent is also fine.
+If you already use RStudio, Stata, SAS, or another statistics program, a CLI agent such as Claude Code, Codex CLI, or Gemini CLI is a good companion. If you already use RStudio, Positron, or VS Code, Posit AI, GitHub Copilot Agent Mode, or another editor-based agent is also fine.
 
 # If Something Fails
 

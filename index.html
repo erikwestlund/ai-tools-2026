@@ -2205,6 +2205,10 @@ vertical-align: -.125em;
 <li><a href="syllabus.html">Syllabus</a></li>
 <li><a href="git-workflow.html">Course Materials And Git Workflow</a></li>
 <li><a href="modules/00_installation-instructions/installation-instructions.qmd">Installation Instructions</a></li>
+<li><a href="modules/00_installation-instructions/rstudio-repository-setup.qmd">RStudio Repository Setup</a></li>
+<li><a href="modules/00_installation-instructions/positron-or-vs-code-repository-setup.qmd">Positron Or VS Code Repository Setup</a></li>
+<li><a href="modules/00_installation-instructions/other-software-repository-setup.qmd">Other Software Repository Setup</a></li>
+<li><a href="modules/00_installation-instructions/posit-ai-setup.qmd">Posit AI Setup</a></li>
 <li><a href="assignments/problem-set-1-data-visualization.html">Problem Set 1: Data Visualization</a></li>
 <li><a href="assignments/problem-set-2-statistical-modeling.html">Problem Set 2: Statistical Modeling</a></li>
 <li><a href="assignments/final-project-simulated-data-workflow.html">Final Project: Simulated Data Workflow</a></li>
@@ -2216,24 +2220,23 @@ vertical-align: -.125em;
 <p>We will start with a condensed introduction to LLMs, why they are useful for statistical work, where they fail, and why structured workflows matter. We will compare chatbots, browser tools, GUI/IDE harnesses, and CLI harnesses on the same small task, then introduce context management with <code>AGENTS.md</code>, <code>CLAUDE.md</code>, and skills.</p>
 <ul>
 <li><strong>Slides:</strong> <a href="slides/01-session-1.html">Session 1: Foundations and First Workflow</a></li>
-<li><strong>Setup practice:</strong> <a href="practice/tasks/00_open-project-and-glimpse/">Open Project And Glimpse folder</a> and <a href="practice/prompts/00_open-project-and-glimpse/starter-prompt.txt">prompt</a></li>
+<li><strong>Setup practice:</strong> run <code>source(&quot;updater.R&quot;)</code>, open <code>practice/work/00_open-project-and-glimpse/</code>, and use the <a href="practice/prompts/00_open-project-and-glimpse/starter-prompt.txt">prompt</a></li>
 <li><strong>Demo:</strong> <a href="modules/01_agent-demo/01_data-cleaning.qmd">First Agent Demo</a></li>
-<li><strong>Practice:</strong> <a href="practice/tasks/01_clean-and-visualize/">Clean And Visualize project folder</a> and <a href="practice/prompts/01_clean-and-visualize/">prompt/instructions</a></li>
+<li><strong>Practice:</strong> run <code>source(&quot;updater.R&quot;)</code>, open <code>practice/work/01_clean-and-visualize/</code>, and use the <a href="practice/prompts/01_clean-and-visualize/">prompt/instructions</a></li>
 <li><strong>Assigned:</strong> <a href="assignments/problem-set-1-data-visualization.html">Problem Set 1: Data Visualization</a></li>
 </ul>
 </section>
-<section id="session-2-tuesday-june-16-context-agent-differences-and-modeling-workflows" class="level3">
-<h3 class="anchored" data-anchor-id="session-2-tuesday-june-16-context-agent-differences-and-modeling-workflows">Session 2 (Tuesday, June 16): Context, Agent Differences, and Modeling Workflows</h3>
-<p>We will focus on context management, agent differences, and repeatable AI-assisted modeling workflows. The day moves from a controlled context A/B demo into a worked agent-comparison case study and hands-on modeling practice.</p>
+<section id="session-2-tuesday-june-16-hands-on-repo-workflow-and-first-output" class="level3">
+<h3 class="anchored" data-anchor-id="session-2-tuesday-june-16-hands-on-repo-workflow-and-first-output">Session 2 (Tuesday, June 16): Hands-On Repo Workflow And First Output</h3>
+<p>We will start hands-on: make sure everyone has the course repo, run the updater, open a folder-level project, and use an AI agent to create one table and one visualization from a clean dataset.</p>
 <ul>
-<li><p>Context files, skills, prompts, and working-directory context</p></li>
-<li><p>A/B demo: the same plotting task with and without <code>AGENTS.md</code></p></li>
-<li><p>Case study: how tool, model, prompt, and harness differences affect analysis output</p></li>
-<li><p>Practice: count-modeling workflow on simulated maternal-health data</p></li>
-<li><p><strong>Slides:</strong> <a href="slides/02-session-2.html">Session 2: Context, Agent Differences, and Modeling Workflows</a></p></li>
-<li><p><strong>Module:</strong> Context Management (to be released)</p></li>
-<li><p><strong>Module:</strong> Agent Differences Example (to be released)</p></li>
-<li><p><strong>Practice:</strong> Context workflow (to be released)</p></li>
+<li><p>Course repo and updater check</p></li>
+<li><p>Folder-level project setup in RStudio or Positron</p></li>
+<li><p>A small table-and-visualization practice project copied into <code>practice/work/</code></p></li>
+<li><p>Manual review of generated code and output</p></li>
+<li><p><strong>Slides:</strong> <a href="slides/02-session-2.html">Session 2: Hands-On Repo Workflow And First Output</a></p></li>
+<li><p><strong>Practice:</strong> run <code>source(&quot;updater.R&quot;)</code>, open <code>practice/work/02_table-and-visualization/</code>, and use the <a href="practice/prompts/02_table-and-visualization/starter-prompt.txt">prompt</a></p></li>
+<li><p><strong>Later practice:</strong> Context workflow (to be released)</p></li>
 <li><p><strong>Due before class:</strong> Short course project topic proposal.</p></li>
 <li><p><strong>Assigned:</strong> <a href="assignments/problem-set-2-statistical-modeling.html">Problem Set 2: Statistical Modeling</a></p></li>
 </ul>
@@ -2249,7 +2252,7 @@ vertical-align: -.125em;
 </section>
 <section id="pre-work" class="level2">
 <h2 class="anchored" data-anchor-id="pre-work">Pre-Work</h2>
-<p>Before the first class, students should complete the <a href="modules/00_installation-instructions/installation-instructions.qmd">Installation Instructions</a>: install Git if needed, install R/RStudio or Positron, install Quarto, and arrange access to at least one AI agent tool. A GitHub account is only needed if your chosen AI tool requires it, such as GitHub Copilot.</p>
+<p>Before the first class, students should complete the <a href="modules/00_installation-instructions/installation-instructions.qmd">Installation Instructions</a>: install Git if needed, install R/RStudio or Positron, install Quarto, and arrange access to at least one AI agent tool. RStudio users can follow the <a href="modules/00_installation-instructions/rstudio-repository-setup.qmd">RStudio Repository Setup</a>; Positron or VS Code users can follow the <a href="modules/00_installation-instructions/positron-or-vs-code-repository-setup.qmd">Positron Or VS Code Repository Setup</a>; other users can follow the <a href="modules/00_installation-instructions/other-software-repository-setup.qmd">Other Software Repository Setup</a>. Posit AI users can follow the <a href="modules/00_installation-instructions/posit-ai-setup.qmd">Posit AI Setup</a>. A GitHub account is only needed if your chosen AI tool requires it, such as GitHub Copilot.</p>
 </section>
 <section id="course-readings" class="level2">
 <h2 class="anchored" data-anchor-id="course-readings">Course Readings</h2>

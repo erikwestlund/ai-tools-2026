@@ -1081,7 +1081,7 @@ margin-right: 0; }
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">AI Tools for Data Science and Statistics</h1>
-  <p class="subtitle">Session 2: Context, Agent Differences, and Modeling Workflows</p>
+  <p class="subtitle">Session 2: Hands-On Repo Workflow And First Output</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1096,248 +1096,141 @@ Erik Westlund, PhD
 <section id="goals-for-session-2" class="slide level2 center">
 <h2>Goals For Session 2</h2>
 <ul>
-<li class="fragment">Use context deliberately instead of relying on one-off prompts</li>
-<li class="fragment">Compare the same task with and without a local context file</li>
-<li class="fragment">Review how different agent/harness/model combinations can produce different analysis quality</li>
-<li class="fragment">Practice a modeling workflow with explicit checks and interpretation limits</li>
+<li class="fragment">Get everyone working from the current course repository.</li>
+<li class="fragment">Test <code>updater.R</code> before doing analysis work.</li>
+<li class="fragment">Open a copied practice folder from <code>practice/work/</code> as its own RStudio or Positron project.</li>
+<li class="fragment">Use an AI agent to create one table and one visualization.</li>
+<li class="fragment">Check that the code, paths, table, and plot make sense.</li>
+</ul>
+</section>
+<section id="what-changed-from-day-1" class="slide level2 center">
+<h2>What Changed From Day 1</h2>
+<ul>
+<li class="fragment">We got through the intro, lecture, and first demo.</li>
+<li class="fragment">We did not have enough time for a full computing check-in.</li>
+<li class="fragment">Today starts hands-on.</li>
+<li class="fragment">The goal is a working setup plus one small completed output.</li>
 </ul>
 </section>
 <section id="run-of-show" class="slide level2 center">
 <h2>Run Of Show</h2>
 <ul>
-<li class="fragment">Arrival and recap: 10 minutes</li>
-<li class="fragment">Context management: 25 minutes</li>
-<li class="fragment">Context A/B module demo: 20 minutes</li>
-<li class="fragment">Break: 7 minutes</li>
-<li class="fragment">Agent differences case study: 23 minutes</li>
-<li class="fragment">Modeling practice: 35 minutes</li>
-<li class="fragment">Wrap-up: 10 minutes</li>
+<li class="fragment">Repo and updater check.</li>
+<li class="fragment">Open the Day 2 module as a project.</li>
+<li class="fragment">Ask the agent for a small table and plot.</li>
+<li class="fragment">Run and render the notebook.</li>
+<li class="fragment">Review what the agent produced.</li>
+<li class="fragment">Then move to context and workflow discussion if time allows.</li>
 </ul>
 </section>
-<section id="section" class="slide level2 center" data-background-color="#2c3e50">
-<h2></h2>
-<div style="color: white; font-size: 1.5em; text-align: center;">
-<p>Context Management</p>
-</div>
-<div style="color: #ecf0f1; font-size: 0.9em; text-align: center;">
-<p>What the agent can see determines what it can follow</p>
-</div>
+<section id="repo-check" class="slide level2 center">
+<h2>Repo Check</h2>
+<p>You should have the public course repo on your computer.</p>
+<p>Repository URL:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href></a>https://github.com/erikwestlund/ai-tools-2026</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>RStudio walkthrough:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href></a>modules/00_installation-instructions/rstudio-repository-setup.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Positron or VS Code walkthrough:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href></a>modules/00_installation-instructions/positron-or-vs-code-repository-setup.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Other software walkthrough:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href></a>modules/00_installation-instructions/other-software-repository-setup.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Posit AI setup:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href></a>modules/00_installation-instructions/posit-ai-setup.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you already cloned it, open that folder.</p>
+<p>If you do not have it yet, clone it now.</p>
 </section>
-<section id="what-counts-as-context" class="slide level2 center">
-<h2>What Counts As Context?</h2>
+<section id="updater-check" class="slide level2 center">
+<h2>Updater Check</h2>
+<p>From the course project root, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href></a><span class="fu">source</span>(<span class="st">&quot;updater.R&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This should:</p>
 <ul>
-<li class="fragment">The message you type</li>
-<li class="fragment">Files in the working directory</li>
-<li class="fragment">Open files in the editor</li>
-<li class="fragment">Repository-level instructions such as <code>AGENTS.md</code> or <code>CLAUDE.md</code></li>
-<li class="fragment">Skills, checklists, rubrics, and examples</li>
-<li class="fragment">Prior conversation state</li>
-<li class="fragment">Tool outputs from searches, tests, renders, or code execution</li>
+<li class="fragment">pull the latest course files,</li>
+<li class="fragment">copy missing practice task files into <code>practice/work/</code>,</li>
+<li class="fragment">leave your existing <code>practice/work/</code> files alone.</li>
 </ul>
 </section>
-<section id="context-is-a-design-problem" class="slide level2 center">
-<h2>Context Is A Design Problem</h2>
+<section id="if-the-updater-fails" class="slide level2 center">
+<h2>If The Updater Fails</h2>
+<p>Do not delete your repo.</p>
 <ul>
-<li class="fragment">Good context makes the desired workflow easier to follow.</li>
-<li class="fragment">Missing context pushes the model toward generic defaults.</li>
-<li class="fragment">Excess context can distract the model or bury the important constraint.</li>
-<li class="fragment">Conflicting context can produce inconsistent behavior.</li>
-<li class="fragment">Sensitive context can create privacy risk.</li>
+<li class="fragment">Check whether you edited course-owned files.</li>
+<li class="fragment">Save anything you need from those edits.</li>
+<li class="fragment">Ask for help before forcing Git changes.</li>
+<li class="fragment">Your work should live in <code>practice/work/</code>.</li>
 </ul>
 </section>
-<section id="what-belongs-in-stable-context" class="slide level2 center">
-<h2>What Belongs In Stable Context?</h2>
+<section id="open-the-practice-work-project" class="slide level2 center">
+<h2>Open The Practice Work Project</h2>
+<p>Open only this copied work folder as the project:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href></a>practice/work/02_table-and-visualization/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use:</p>
 <ul>
-<li class="fragment">Project structure</li>
-<li class="fragment">Data locations and data restrictions</li>
-<li class="fragment">Coding style and package preferences</li>
-<li class="fragment">Output paths</li>
-<li class="fragment">Verification steps</li>
-<li class="fragment">Interpretation rules</li>
-<li class="fragment">Language style rules</li>
+<li class="fragment">RStudio: <code>table-and-visualization.Rproj</code></li>
+<li class="fragment">Positron: <code>table-and-visualization.code-workspace</code></li>
 </ul>
 </section>
-<section id="what-belongs-in-the-prompt" class="slide level2 center">
-<h2>What Belongs In The Prompt?</h2>
+<section id="why-this-folder" class="slide level2 center">
+<h2>Why This Folder</h2>
+<p>The copied practice work folder contains the files the agent needs:</p>
 <ul>
-<li class="fragment">The current task</li>
-<li class="fragment">The specific file or output to change</li>
-<li class="fragment">The level of detail wanted now</li>
-<li class="fragment">Any temporary constraint for this run</li>
-<li class="fragment">The exact question to answer before coding</li>
+<li class="fragment"><code>data/community_clinic_visits.csv</code></li>
+<li class="fragment"><code>data/codebook.md</code></li>
+<li class="fragment"><code>01_table-and-visualization.qmd</code></li>
+<li class="fragment">local project files</li>
+<li class="fragment">local <code>_quarto.yml</code></li>
 </ul>
+<p>Do not edit the original files in <code>practice/tasks/</code> or <code>modules/</code>. Your editable copy belongs in <code>practice/work/</code>.</p>
+<p>The prompt is outside the work folder.</p>
 </section>
-<section id="context-files" class="slide level2 center">
-<h2>Context Files</h2>
-<ul>
-<li class="fragment"><code>AGENTS.md</code>: common convention for coding agents</li>
-<li class="fragment"><code>CLAUDE.md</code>: tool-specific convention used by Claude-family workflows</li>
-<li class="fragment"><code>skills/</code>: reusable task guidance that can be referenced from prompts</li>
-<li class="fragment">Task prompts: short instructions for one activity or assignment</li>
-</ul>
+<section id="prompt-location" class="slide level2 center">
+<h2>Prompt Location</h2>
+<p>Use this prompt:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href></a>practice/prompts/02_table-and-visualization/starter-prompt.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Paste the prompt into your agent. Do not put the prompt file inside the work folder.</p>
 </section>
-<section id="useful-context-pattern" class="slide level2 center">
-<h2>Useful Context Pattern</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href></a>Use these files:</span>
-<span id="cb1-2"><a href></a>- Dataset: data/simulated/...</span>
-<span id="cb1-3"><a href></a>- Codebook: data/codebooks/...</span>
-<span id="cb1-4"><a href></a>- Skill: skills/...</span>
-<span id="cb1-5"><a href></a></span>
-<span id="cb1-6"><a href></a>First inspect the files. Then tell me what you plan to do.</span>
-<span id="cb1-7"><a href></a>Do not write the full analysis until I approve the plan.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="common-context-failures" class="slide level2 center">
-<h2>Common Context Failures</h2>
-<ul>
-<li class="fragment">The agent ignores the codebook.</li>
-<li class="fragment">The agent guesses variable meanings.</li>
-<li class="fragment">The agent writes outputs to the wrong folder.</li>
-<li class="fragment">The agent uses a style that does not match the project.</li>
-<li class="fragment">The agent makes causal claims from descriptive data.</li>
-<li class="fragment">The agent produces polished interpretation before checks are complete.</li>
-</ul>
-</section>
-<section id="context-ab-demonstration" class="slide level2 center">
-<h2>Context A/B Demonstration</h2>
-<p>Module 02 uses the same visualization task twice:</p>
-<ul>
-<li class="fragment"><code>modules/02_context-management/without-context/</code></li>
-<li class="fragment"><code>modules/02_context-management/with-context/</code></li>
-</ul>
-<p>The second folder includes <code>AGENTS.md</code> with explicit plotting and interpretation rules.</p>
-</section>
-<section id="what-to-watch-for" class="slide level2 center">
-<h2>What To Watch For</h2>
-<ul>
-<li class="fragment">Does the agent find and follow <code>AGENTS.md</code>?</li>
-<li class="fragment">Does it use the requested theme, legend position, and color scale?</li>
-<li class="fragment">Does it label axes with units?</li>
-<li class="fragment">Does it include source information?</li>
-<li class="fragment">Does it avoid causal language?</li>
-<li class="fragment">Does it explain which context rules it followed?</li>
-</ul>
-</section>
-<section id="section-1" class="slide level2 center" data-background-color="#2c3e50">
-<h2></h2>
-<div style="color: white; font-size: 1.5em; text-align: center;">
-<p>Agent Differences</p>
-</div>
-<div style="color: #ecf0f1; font-size: 0.9em; text-align: center;">
-<p>The harness and prompt are part of the analysis system</p>
-</div>
-</section>
-<section id="the-comparison-question" class="slide level2 center">
-<h2>The Comparison Question</h2>
-<p>If we give similar analysis tasks to different tools, do we get equivalent work?</p>
-<p>Important dimensions:</p>
-<ul>
-<li class="fragment">Prompt detail</li>
-<li class="fragment">Model capability</li>
-<li class="fragment">Harness access to files</li>
-<li class="fragment">Package choices</li>
-<li class="fragment">Ability to run and repair code</li>
-<li class="fragment">Quality of statistical judgment</li>
-<li class="fragment">Quality of written interpretation</li>
-</ul>
-</section>
-<section id="what-the-worked-experiment-shows" class="slide level2 center">
-<h2>What The Worked Experiment Shows</h2>
-<ul>
-<li class="fragment">More detailed prompts often produce better structure.</li>
-<li class="fragment">Agent workflows can inspect more files and revise code.</li>
-<li class="fragment">Chat workflows can still produce useful code when given strong context.</li>
-<li class="fragment">Polished output can still contain errors, unsupported claims, or stale assumptions.</li>
-<li class="fragment">Some failures are ordinary programming failures, not deep AI failures.</li>
-</ul>
-</section>
-<section id="what-we-evaluate" class="slide level2 center">
-<h2>What We Evaluate</h2>
-<ul>
-<li class="fragment">Did the code run?</li>
-<li class="fragment">Did the analysis use the intended dataset?</li>
-<li class="fragment">Did the model match the outcome and data structure?</li>
-<li class="fragment">Were diagnostics used before interpretation?</li>
-<li class="fragment">Were missingness and data quality checked?</li>
-<li class="fragment">Were claims limited to what the data support?</li>
-<li class="fragment">Was the work reproducible?</li>
-</ul>
-</section>
-<section id="case-study-module" class="slide level2 center">
-<h2>Case Study Module</h2>
-<p>Module 03 is a cleaned-up case study from a worked agent-comparison experiment.</p>
-<ul>
-<li class="fragment">Simple prompt versus detailed prompt</li>
-<li class="fragment">Chat versus agent workflows</li>
-<li class="fragment">Generated code quality</li>
-<li class="fragment">Modeling choices</li>
-<li class="fragment">Interpretation discipline</li>
-<li class="fragment">Review checklist</li>
-</ul>
-</section>
-<section id="main-lesson" class="slide level2 center">
-<h2>Main Lesson</h2>
-<p>AI output quality is not a property of the model alone.</p>
-<p>It is produced by the full workflow:</p>
-<ul>
-<li class="fragment">model</li>
-<li class="fragment">harness</li>
-<li class="fragment">prompt</li>
-<li class="fragment">context</li>
-<li class="fragment">files</li>
-<li class="fragment">permissions</li>
-<li class="fragment">verification loop</li>
-<li class="fragment">analyst review</li>
-</ul>
-</section>
-<section id="section-2" class="slide level2 center" data-background-color="#2c3e50">
-<h2></h2>
-<div style="color: white; font-size: 1.5em; text-align: center;">
-<p>Modeling Practice</p>
-</div>
-<div style="color: #ecf0f1; font-size: 0.9em; text-align: center;">
-<p>Use AI to help build the workflow, then audit the workflow</p>
-</div>
-</section>
-<section id="practice-task" class="slide level2 center">
-<h2>Practice Task</h2>
-<p>Use <code>practice/tasks/02_modeling-workflow/</code> as the project folder. Use <code>practice/prompts/02_modeling-workflow/</code> for the prompt and instructions.</p>
-<p>Goal:</p>
-<ul>
-<li class="fragment">Build a comorbidity count from simulated maternal-health indicators.</li>
-<li class="fragment">Fit and compare plausible count models.</li>
-<li class="fragment">Report diagnostics and limitations.</li>
-<li class="fragment">Save work in <code>practice/work/</code>.</li>
-</ul>
-</section>
-<section id="modeling-guardrails" class="slide level2 center">
-<h2>Modeling Guardrails</h2>
-<ul>
-<li class="fragment">Define the outcome explicitly.</li>
-<li class="fragment">Check the outcome distribution before choosing a model.</li>
-<li class="fragment">Compare at least two reasonable model specifications.</li>
-<li class="fragment">Treat synthetic data as synthetic.</li>
-<li class="fragment">Avoid causal claims.</li>
-<li class="fragment">Keep interpretation tied to fitted model output.</li>
-</ul>
-</section>
-<section id="prompting-pattern-for-modeling" class="slide level2 center">
-<h2>Prompting Pattern For Modeling</h2>
+<section id="task" class="slide level2 center">
+<h2>Task</h2>
+<p>Ask the agent to update <code>01_table-and-visualization.qmd</code> to do only this:</p>
 <ol type="1">
-<li class="fragment">Ask for a plan before code.</li>
-<li class="fragment">Ask for code in small steps.</li>
-<li class="fragment">Run the code.</li>
-<li class="fragment">Paste errors back if needed.</li>
-<li class="fragment">Ask for a review of the model choice and interpretation.</li>
-<li class="fragment">Check the final result yourself.</li>
+<li class="fragment">Read <code>data/community_clinic_visits.csv</code>.</li>
+<li class="fragment">Create one table summarizing visits by <code>clinic_type</code>.</li>
+<li class="fragment">Create one visualization comparing visits by <code>clinic_type</code>.</li>
+<li class="fragment">Include a short note about what one row represents.</li>
 </ol>
+<p>No modeling. No causal claims. No extra analyses.</p>
+</section>
+<section id="manual-checks" class="slide level2 center">
+<h2>Manual Checks</h2>
+<p>Before accepting the output, check:</p>
+<ul>
+<li class="fragment">Does the notebook render?</li>
+<li class="fragment">Does it read from <code>data/community_clinic_visits.csv</code>?</li>
+<li class="fragment">Does the table use <code>clinic_type</code> correctly?</li>
+<li class="fragment">Does the plot match the table?</li>
+<li class="fragment">Are axis labels readable?</li>
+<li class="fragment">Did the agent add analysis beyond the requested scope?</li>
+</ul>
+</section>
+<section id="context-lesson" class="slide level2 center">
+<h2>Context Lesson</h2>
+<p>Small details changed the workflow:</p>
+<ul>
+<li class="fragment">opening the correct folder,</li>
+<li class="fragment">using a local <code>_quarto.yml</code>,</li>
+<li class="fragment">keeping prompts outside the project folder,</li>
+<li class="fragment">giving the agent a narrow task,</li>
+<li class="fragment">checking the output manually.</li>
+</ul>
+<p>That is context management in practice.</p>
 </section>
 <section id="wrap-up" class="slide level2 center">
 <h2>Wrap-Up</h2>
 <ul>
-<li class="fragment">Context belongs in files when it should persist.</li>
-<li class="fragment">Prompts should reference the context that matters now.</li>
-<li class="fragment">Agent comparisons should be judged by correctness and reproducibility, not polish.</li>
-<li class="fragment">Modeling workflows need diagnostics and restrained interpretation.</li>
+<li class="fragment">A working repo matters before any AI workflow can work.</li>
+<li class="fragment">Folder-level projects keep paths and context predictable.</li>
+<li class="fragment">Prompts should be outside the project folder unless you intentionally want them in context.</li>
+<li class="fragment">Simple tasks are where we learn whether the setup is reliable.</li>
 </ul>
 
 </section>

@@ -4,7 +4,7 @@ Create and save your own notebooks, scripts, rendered HTML files, and notes here
 
 Files in this folder are ignored by Git so `git pull` can update course materials without overwriting your work.
 
-Use `practice/tasks/` as project folders and `practice/prompts/` for prompts and instructions.
+Run `source("updater.R")` to copy starter task folders into `practice/work/`, then open the copied folder in `practice/work/` as your project.
 
 If you use R or RStudio, run `source("updater.R")` from the course project root to update the course and copy missing task starter files into this folder.
 

@@ -1,0 +1,13 @@
+clinic_id,region,clinic_type,month,visits,followup_rate
+C001,North,Primary care,January,312,0.74
+C002,North,Primary care,January,284,0.69
+C003,North,Mobile clinic,January,146,0.61
+C004,South,Primary care,January,338,0.77
+C005,South,Mobile clinic,January,169,0.64
+C006,East,Primary care,January,295,0.72
+C007,East,Mobile clinic,January,158,0.59
+C008,West,Primary care,January,321,0.76
+C009,West,Mobile clinic,January,173,0.63
+C010,West,Community health,January,246,0.70
+C011,North,Community health,February,257,0.71
+C012,South,Community health,February,263,0.73
