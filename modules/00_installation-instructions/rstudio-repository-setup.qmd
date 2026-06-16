@@ -130,15 +130,15 @@ practice/work/
 
 For hands-on work, first run the updater so the assigned task is copied into `practice/work/`. Then open the copied folder in `practice/work/`, not the course-owned folder in `modules/` or `practice/tasks/`.
 
-For example, Day 2 uses:
+For example, Day 2 starts with:
 
 ```text
-practice/work/02_table-and-visualization/
+practice/work/01_clean-and-visualize/
 ```
 
 In that folder, open the `.Rproj` file in RStudio.
 
-Opening the folder-level project keeps local paths such as `data/community_clinic_visits.csv` working as expected.
+Opening the folder-level project keeps local paths such as `data/county_wellness_indicators_long.csv` working as expected.
 
 # How The Project Files Work
 

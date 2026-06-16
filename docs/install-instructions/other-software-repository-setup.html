@@ -2336,18 +2336,18 @@ vertical-align: -.125em;
 <section id="using-a-cli-agent" class="level1">
 <h1>Using A CLI Agent</h1>
 <p>If you use a CLI agent such as Codex CLI or Claude Code, open the terminal in only the copied work folder assigned for the task.</p>
-<p>For example, to finish the 2nd practice:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> practice/work/02_table-and-visualization</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example, to start the Day 2 practice:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> practice/work/01_clean-and-visualize</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then start your agent from that folder.</p>
 <p>Do not start the agent from the full course repository unless the task explicitly asks for that. Do not let agents edit course-owned folders such as <code>modules/</code> or <code>practice/tasks/</code>. A smaller working folder gives the agent less irrelevant context and reduces the chance of editing the wrong files.</p>
 </section>
 <section id="quarto-project-roots" class="level1">
 <h1>Quarto Project Roots</h1>
 <p>Some practice work folders include a local <code>_quarto.yml</code> file.</p>
-<p>Quarto uses the nearest <code>_quarto.yml</code> to decide where a project starts. This helps local paths such as <code>data/community_clinic_visits.csv</code> resolve from the assigned folder.</p>
+<p>Quarto uses the nearest <code>_quarto.yml</code> to decide where a project starts. This helps local paths such as <code>data/county_wellness_indicators_long.csv</code> resolve from the assigned folder.</p>
 <p>If you render from a terminal, first move into the assigned folder:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> practice/work/02_table-and-visualization</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render 01_table-and-visualization.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> practice/work/01_clean-and-visualize</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render 01_data-cleaning.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Note that if you want to use Quarto, you will need to install Quarto manually if you are not using RStudio or Positron.</p>
 </section>
 <section id="quick-check" class="level1">

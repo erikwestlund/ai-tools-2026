@@ -29,7 +29,7 @@ Use this guidance when creating or revising modules, demos, and practice tasks f
 - Include a local `_quarto.yml` in each practice task folder so Quarto renders with that task folder as the project root.
 - Use local `_quarto.yml` files when notebooks read local paths such as `data/file.csv`; this prevents Positron or RStudio renders from resolving paths against the parent course repo.
 - The practice-task project files are part of the scaffold. They are there to make `data/...` paths resolve locally after `updater.R` copies the task folder into `practice/work/`.
-- Do not put task READMEs or starter prompts inside `practice/tasks/<task-name>/`.
+- Do not put task READMEs or prompt files inside `practice/tasks/<task-name>/`.
 - Write practice tasks as realistic work students could encounter: cleaning, checking assumptions, plotting, modeling, debugging, summarizing limitations, or validating AI output.
 - Use stage-specific notebook names for practice work, not generic `starter-notebook.qmd`, except for minimal setup checks such as `00_open-project-and-glimpse`.
 - Scaffold notebooks should usually contain only YAML with a clear `title`; prompts outside the task folder should drive the work.

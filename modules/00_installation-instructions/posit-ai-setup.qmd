@@ -77,13 +77,13 @@ For course tasks, do not open the full course repository as the agent context un
 For Day 2, open:
 
 ```text
-practice/work/02_table-and-visualization/
+practice/work/01_clean-and-visualize/
 ```
 
 Then use the prompt from:
 
 ```text
-practice/prompts/02_table-and-visualization/starter-prompt.txt
+practice/prompts/01_clean-and-visualize/prompt.txt
 ```
 
 Paste the prompt into Posit Assistant. Do not copy the prompt file into the work folder.

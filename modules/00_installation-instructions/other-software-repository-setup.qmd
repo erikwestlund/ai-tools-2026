@@ -145,10 +145,10 @@ practice/work/
 
 If you use a CLI agent such as Codex CLI or Claude Code, open the terminal in only the copied work folder assigned for the task.
 
-For example, to finish the 2nd practice:
+For example, to start the Day 2 practice:
 
 ```bash
-cd practice/work/02_table-and-visualization
+cd practice/work/01_clean-and-visualize
 ```
 
 Then start your agent from that folder.
@@ -159,13 +159,13 @@ Do not start the agent from the full course repository unless the task explicitl
 
 Some practice work folders include a local `_quarto.yml` file.
 
-Quarto uses the nearest `_quarto.yml` to decide where a project starts. This helps local paths such as `data/community_clinic_visits.csv` resolve from the assigned folder.
+Quarto uses the nearest `_quarto.yml` to decide where a project starts. This helps local paths such as `data/county_wellness_indicators_long.csv` resolve from the assigned folder.
 
 If you render from a terminal, first move into the assigned folder:
 
 ```bash
-cd practice/work/02_table-and-visualization
-quarto render 01_table-and-visualization.qmd
+cd practice/work/01_clean-and-visualize
+quarto render 01_data-cleaning.qmd
 ```
 
 Note that if you want to use Quarto, you will need to install Quarto manually if you are not using RStudio or Positron.

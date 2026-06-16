@@ -82,13 +82,13 @@ For hands-on work, first run the updater so the assigned task is copied into `pr
 For Day 2, open:
 
 ```text
-practice/work/02_table-and-visualization/
+practice/work/01_clean-and-visualize/
 ```
 
 Use the workspace file inside that folder:
 
 ```text
-table-and-visualization.code-workspace
+clean-and-visualize.code-workspace
 ```
 
 Do not open the whole course repository as the agent project unless the task explicitly asks for that.
