@@ -1122,7 +1122,7 @@ Erik Westlund
 <section id="problem-set-2-practice" class="slide level2 center">
 <h2>Problem Set 2 Practice</h2>
 <ul>
-<li class="fragment">For time reasons, we did not practice the modeling workflow</li>
+<li class="fragment">Due to time constraints, we did not practice the modeling workflow</li>
 <li class="fragment">This is the foundation for problem set 2</li>
 <li class="fragment">Recommendation: do a quick effort using <code>practice/02_modeling-workflow</code>, then the real assignment</li>
 </ul>
@@ -1155,8 +1155,8 @@ Erik Westlund
 <section id="context-files-how-to-use-them" class="slide level2 center">
 <h2>Context Files: How To Use Them</h2>
 <ul>
-<li class="fragment">Hand-crafted context files performed better than AI-generated ones in Gloaguen et al.’s <code>AGENTS.md</code> study <span class="citation" data-cites="gloaguen2026agentsmd">(<a href="#/wrap-up" role="doc-biblioref" onclick>Gloaguen et al. 2026</a>)</span>.</li>
-<li class="fragment">Place must-have constraints in the file before work starts (but know they may not always constrain the models)</li>
+<li class="fragment">Hand-crafted context files performed better than AI-generated ones in Gloaguen et al.’s <code>AGENTS.md</code> study <span class="citation" data-cites="gloaguen2026agentsmd">(<a href="#/references" role="doc-biblioref" onclick>Gloaguen et al. 2026</a>)</span>.</li>
+<li class="fragment">Place must-have constraints in the file before work starts.</li>
 <li class="fragment">Do not trust the agent to follow every constraint; still review the output.</li>
 <li class="fragment">When the same papercut happens repeatedly, append a short rule to the context file.</li>
 </ul>
@@ -1171,19 +1171,42 @@ Erik Westlund
 <section id="goals-for-session-3" class="slide level2 center">
 <h2>Goals For Session 3</h2>
 <ul>
-<li class="fragment">Explain why PHI changes AI-assisted workflow design</li>
 <li class="fragment">Separate code movement from data movement</li>
 <li class="fragment">Use simulated data for development and review</li>
 <li class="fragment">Identify what information can safely leave a restricted environment only after project-specific approval</li>
 <li class="fragment">Prepare final-project workflows without exposing restricted data to AI tools</li>
 </ul>
+</section></section>
+<section>
+<section id="section-3" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>AI and Reproducibility</p>
+</div>
+</section>
+<section id="code-reproducibility" class="slide level2 center">
+<h2>Code &amp; Reproducibility</h2>
+<ul>
+<li class="fragment">AI writes code for your analysis.</li>
+<li class="fragment">AI should not “do” the analysis (it will if you ask it to).</li>
+<li class="fragment">You should <strong>always</strong> be able to re-run your analysis when it’s done without any AI tooling.</li>
+<li class="fragment">Because AI writes the code, you can use it for sensitive work, so long as the AI doesn’t touch protected data.</li>
+</ul>
+</section></section>
+<section>
+<section id="section-4" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>AI &amp; Protected Data</p>
+</div>
 </section>
 <section id="core-principle" class="slide level2 center">
 <h2>Core Principle</h2>
-<p>Code can move across computing environments; sensitive data cannot.</p>
+<p>Code can move across computing environments; protected data cannot.</p>
 </section>
-<section id="what-counts-as-sensitive-here" class="slide level2 center">
-<h2>What Counts As Sensitive Here?</h2>
+<section id="what-counts-as-protected" class="slide level2 center">
+<h2>What Counts As Protected?</h2>
+<p>It depends on the law and your institution’s rules. Often:</p>
 <ul>
 <li class="fragment">Direct identifiers</li>
 <li class="fragment">Dates, geography, rare conditions, and small cells that can become identifying</li>
@@ -1198,12 +1221,11 @@ Erik Westlund
 <ul>
 <li class="fragment">A chat tool sees what you paste or upload.</li>
 <li class="fragment">An agent can inspect files it has permission to read.</li>
-<li class="fragment">If sensitive files are in the workspace, assume the agent has access to them.</li>
-<li class="fragment">Policy and data-use agreements determine what is allowed.</li>
+<li class="fragment">If any data files are in the workspace, assume the agent has access to them.</li>
 </ul>
 </section>
-<section id="safe-workflow-shape" class="slide level2 center">
-<h2>Safe Workflow Shape</h2>
+<section id="safe-workflow" class="slide level2 center">
+<h2>Safe Workflow</h2>
 <ol type="1">
 <li class="fragment">Work with restricted data only in the approved environment.</li>
 <li class="fragment">Extract only approved structural information.</li>
@@ -1213,23 +1235,43 @@ Erik Westlund
 <li class="fragment">Export only approved aggregate outputs.</li>
 </ol>
 </section>
-<section id="make-it-impossible-for-ai-to-see-sensitive-data" class="slide level2 center">
-<h2>Make It Impossible for AI to See Sensitive Data</h2>
+<section id="make-it-impossible-for-ai-to-see-protected-data" class="slide level2 center">
+<h2>Make It Impossible for AI to See Protected Data</h2>
 <ul>
-<li class="fragment"><p>It is best that it is physically impossible for the agent to access sensitive information.</p></li>
-<li class="fragment"><p>Use a secure enclave for real data access (e.g., SAFE Desktop at Hopkins).</p></li>
-<li class="fragment"><p>Set up a virtual machine witht the sensitive data on it, where no agents could ever access it, regardless of permissions.</p></li>
+<li class="fragment">It is best that it is physically impossible for the agent to access protected information.</li>
+<li class="fragment">Use a secure enclave for real data access (e.g., SAFE Desktop at Hopkins).</li>
+<li class="fragment">Set up a virtual machine witht the protected data on it, where no agents could ever access it, regardless of permissions.</li>
 </ul>
 </section>
 <section id="use-git-to-your-advantage" class="slide level2 center">
 <h2>Use Git To Your Advantage</h2>
 <ul>
-<li class="fragment">Git can help you be secure and do code transfer</li>
 <li class="fragment">Keep your code in a git repository</li>
 <li class="fragment">Use <code>.gitignore</code> to exclude the data directory; place your sim data here.</li>
 <li class="fragment"><code>git commit</code> and <code>git push</code> from the AI-agent location</li>
 <li class="fragment"><code>git pull</code> from the secure location</li>
+<li class="fragment">Git helps quickly move code from place to place.</li>
 </ul>
+</section>
+<section id="workflow-scientific-advantages" class="slide level2 center">
+<h2>Workflow &amp; Scientific Advantages</h2>
+<ul>
+<li class="fragment"><p>Using simulated data is not just a workaround an annoyance.</p></li>
+<li class="fragment"><p>It can save you a lot of bureaucratic pain with IT, data transfer, etc.</p></li>
+<li class="fragment"><p>Simulating data teaches you about the data structure and helps you do good science.</p>
+<ul>
+<li class="fragment">Lets you determine what variables are related, and how strong that relationship is</li>
+<li class="fragment">This helps you test your statistical models</li>
+<li class="fragment">Are they recovering the correct estimates? Handling confounding?</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="section-5" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Protected Data Workflow Example</p>
+</div>
 </section>
 <section id="two-folder-exercise" class="slide level2 center">
 <h2>Two-Folder Exercise</h2>
@@ -1237,17 +1279,26 @@ Erik Westlund
 <li class="fragment"><code>real-data/</code>: real data and metadata extraction; no AI.</li>
 <li class="fragment"><code>sim-data/</code>: copied metadata, simulated data generation, and AI-assisted notebooks.</li>
 </ul>
-<p>The class data are simulated, but the workflow treats <code>real-data/</code> as restricted.</p>
+<div class="fragment">
+<p>The class data set is not protected, but we will pretend it is.</p>
+</div>
+</section></section>
+<section>
+<section id="section-6" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Real Data Side</p>
+</div>
 </section>
-<section id="real-data-side" class="slide level2 center">
-<h2>Real Data Side</h2>
+<section id="extract-structural-data" class="slide level2 center">
+<h2>Extract Structural Data</h2>
 <ul>
 <li class="fragment">Start where the real data are allowed.</li>
 <li class="fragment">Run <code>extract-data-info.R</code> without AI assistance.</li>
 <li class="fragment">Capture exact column names and R data types.</li>
 <li class="fragment">For continuous variables, capture summary statistics.</li>
 <li class="fragment">For categorical variables, capture approved levels and distributions.</li>
-<li class="fragment">Review <code>outputs/</code> before copying anything to <code>sim-data/metadata/</code>.</li>
+<li class="fragment">Review <code>real-data-metadata/</code> before copying anything to <code>sim-data/real-data-metadata/</code>.</li>
 </ul>
 </section>
 <section id="structural-information" class="slide level2 center">
@@ -1264,15 +1315,56 @@ Erik Westlund
 <li class="fragment">Non-disclosive row and column counts</li>
 </ul>
 </section>
-<section id="sim-data-side" class="slide level2 center">
-<h2>Sim Data Side</h2>
+<section id="capturing-data-structure" class="slide level2 center">
+<h2>Capturing Data Structure</h2>
 <ul>
-<li class="fragment">Use only approved metadata copied into <code>metadata/</code>.</li>
+<li class="fragment">You won’t always have access to the real data.</li>
+<li class="fragment">There is nothing magical about <code>extract-data-info.R</code>.</li>
+<li class="fragment">You can often get what you need through codebooks or just communicating with someone who has data access.</li>
+<li class="fragment">If you fail to completely get variable names, response levels, etc. correct, you can always fix it by hand in the secure environment.</li>
+<li class="fragment">Bring that code back to your safe, simulated environment and fix your sim data to match.</li>
+</ul>
+</section></section>
+<section>
+<section id="section-7" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Practice real data side together</p>
+</div>
+</section>
+<section id="practice" class="slide level2 center">
+<h2>Practice</h2>
+<ul>
+<li class="fragment"><p>Ensure you have run <code>updater.R</code></p>
+<ul>
+<li class="fragment">Type <code>source(&quot;updater.R&quot;)</code> in the R console</li>
+<li class="fragment">Or just run all the code in the file.</li>
+</ul></li>
+<li class="fragment"><p>Open the <code>practice/work/03_simulated-data-workflow/real-data</code> project file</p>
+<ul>
+<li class="fragment"><strong>RStudio</strong>: load the <code>.Rproj</code> file</li>
+<li class="fragment"><strong>Positron</strong>: open the <code>.code-workspace</code> file</li>
+</ul></li>
+<li class="fragment"><p>Run the <code>extract-data-info.R</code> script and copy over the contents of <code>real-data-metadata</code> to the sim-data project directory.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="section-8" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Sim Data Side</p>
+</div>
+</section>
+<section id="generate-the-simulated-data" class="slide level2 center">
+<h2>Generate The Simulated Data</h2>
+<ul>
+<li class="fragment">Use only approved metadata copied into <code>real-data-metadata/</code>.</li>
 <li class="fragment">Ask AI to complete <code>generate-sim-data.R</code>.</li>
 <li class="fragment">Write simulated data to the same file name as the real data.</li>
 <li class="fragment">Use the same column names and compatible types.</li>
+<li class="fragment">Getting relationships correct is optional, but can help with table building and modeling.</li>
+<li class="fragment">You can extend extract-data-info.R, for example, to extract margins in cross-tabs and correlations in continuous variables.</li>
 <li class="fragment">Develop notebooks against the simulated stand-in.</li>
-<li class="fragment">Treat simulated results as code checks, not findings.</li>
 </ul>
 </section>
 <section id="information-to-treat-carefully" class="slide level2 center">
@@ -1297,18 +1389,6 @@ Erik Westlund
 <li class="fragment">Check whether simulated records recreate recognizable combinations.</li>
 </ul>
 </section>
-<section id="simulated-data-purpose" class="slide level2 center">
-<h2>Simulated Data Purpose</h2>
-<p>Simulated data are useful for:</p>
-<ul>
-<li class="fragment">Building cleaning code</li>
-<li class="fragment">Testing joins and reshaping</li>
-<li class="fragment">Prototyping tables and plots</li>
-<li class="fragment">Debugging model syntax</li>
-<li class="fragment">Reviewing workflow structure</li>
-</ul>
-<p>Simulated data are not final evidence.</p>
-</section>
 <section id="no-external-public-repository-requirement" class="slide level2 center">
 <h2>No External Public Repository Requirement</h2>
 <p>This workflow does not require an external public repository.</p>
@@ -1319,7 +1399,9 @@ Erik Westlund
 <li class="fragment">controlled shared drives</li>
 <li class="fragment">manual code transfer reviewed before use</li>
 </ul>
-<p>The key rule is that sensitive data do not leave the approved environment.</p>
+<div class="fragment">
+<p>Sensitive data cannot leave the approved environment.</p>
+</div>
 </section>
 <section id="in-a-real-project" class="slide level2 center">
 <h2>In A Real Project</h2>
@@ -1330,6 +1412,32 @@ Erik Westlund
 <li class="fragment">Generate simulated data as a complete stand-in.</li>
 <li class="fragment">Keep file names and column names identical so code moves cleanly.</li>
 </ul>
+</section></section>
+<section>
+<section id="section-9" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Practice simulated data side together</p>
+</div>
+</section>
+<section id="practice-1" class="slide level2 center">
+<h2>Practice</h2>
+<ul>
+<li class="fragment"><p>Open the <code>sim-data</code> project file</p>
+<ul>
+<li class="fragment"><strong>RStudio</strong>: load the <code>.Rproj</code> file</li>
+<li class="fragment"><strong>Positron</strong>: open the <code>.code-workspace</code> file</li>
+</ul></li>
+<li class="fragment"><p>Ensure you have copied over the <code>real-data-metadata</code> outputs to the sim-data directory</p></li>
+<li class="fragment"><p>Use an AI agent to generate simulated data by pointing it at the metadata. There is a prompt you can use in <code>practice/prompts/</code>.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="section-10" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Back to the Real Data</p>
+</div>
 </section>
 <section id="return-to-real-data" class="slide level2 center">
 <h2>Return To Real Data</h2>
@@ -1340,48 +1448,44 @@ Erik Westlund
 <li class="fragment">Write final interpretation only after running on real data.</li>
 <li class="fragment">Export only approved aggregate results.</li>
 </ul>
+</section></section>
+<section>
+<section id="section-11" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Practice Real Data (part 2) together</p>
+</div>
 </section>
-<section id="hands-on-workflow" class="slide level2 center">
-<h2>Hands-On Workflow</h2>
-<ol type="1">
-<li class="fragment">Run <code>source(&quot;updater.R&quot;)</code>.</li>
-<li class="fragment">Run <code>extract-data-info.R</code> in <code>real-data/</code> without AI.</li>
-<li class="fragment">Copy approved <code>real-data/outputs/</code> files to <code>sim-data/metadata/</code>.</li>
-<li class="fragment">Open <code>practice/work/03_simulated-data-privacy-workflow/sim-data/</code> with your AI tool.</li>
-<li class="fragment">Use prompts from <code>practice/prompts/03_simulated-data-privacy-workflow/</code>.</li>
-<li class="fragment">After review, copy notebooks back to <code>real-data/</code> and run them there without AI.</li>
-</ol>
-</section>
-<section id="final-project-connection" class="slide level2 center">
-<h2>Final Project Connection</h2>
+<section id="practice-2" class="slide level2 center">
+<h2>Practice</h2>
 <ul>
-<li class="fragment">Develop on simulated or public data.</li>
-<li class="fragment">Keep real or restricted data out of AI-visible workspaces.</li>
-<li class="fragment">Submit a workflow that shows what was developed with AI assistance.</li>
-<li class="fragment">Include a reflection on what was checked manually.</li>
-<li class="fragment">Do not include restricted data in submitted materials.</li>
+<li class="fragment"><p>Open the <code>real-data</code> project file</p>
+<ul>
+<li class="fragment"><strong>RStudio</strong>: load the <code>.Rproj</code> file</li>
+<li class="fragment"><strong>Positron</strong>: open the <code>.code-workspace</code> file</li>
+</ul></li>
+<li class="fragment"><p>Copy over your new notebooks.</p></li>
+<li class="fragment"><p>Run them and see if they work.</p></li>
+<li class="fragment"><p>Make any fixes necessary by hand or using the agent in the sim-data environment.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="section-12" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Checking Your Work</p>
+</div>
+</section>
+<section id="validating-ai-outputs" class="slide level2 center">
+<h2>Validating AI Outputs</h2>
+<ul>
+<li class="fragment">As a first pass, you can use a second instance of a model – or ideally a different, similarly capable model – to evaluate the AI-generated code for bugs</li>
+<li class="fragment">You must then review all code.</li>
+<li class="fragment">If you do not have the expertise to validate the AI outputs, ask those who do.</li>
 </ul>
 </section>
-<section id="you-are-responsible" class="slide level2 center">
-<h2>You Are Responsible</h2>
-<ul>
-<li class="fragment">AI use does not transfer responsibility to the tool.</li>
-<li class="fragment">You are responsible for privacy, correctness, interpretation, and what you submit.</li>
-<li class="fragment">If AI wrote code, you still need to understand what the code does.</li>
-<li class="fragment">If you cannot explain or defend a result, do not treat it as finished.</li>
-</ul>
-</section>
-<section id="use-a-second-pass" class="slide level2 center">
-<h2>Use A Second Pass</h2>
-<ul>
-<li class="fragment">Ask a different model or a fresh chat or agent instance to review code.</li>
-<li class="fragment">Give it the code and the intended analysis goal.</li>
-<li class="fragment">Ask it to look for logic errors, privacy risks, statistical issues, and missing checks.</li>
-<li class="fragment">Do not ask only “is this good?” Ask for specific failure modes.</li>
-</ul>
-</section>
-<section id="cross-check-prompt" class="slide level2 smaller center">
-<h2>Cross-Check Prompt</h2>
+<section id="cross-check-prompt-example" class="slide level2 smaller center">
+<h2>Cross-Check Prompt Example</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href></a>Review this analysis code as a skeptical statistical collaborator.</span>
 <span id="cb1-2"><a href></a></span>
 <span id="cb1-3"><a href></a>Look for:</span>
@@ -1390,19 +1494,17 @@ Erik Westlund
 <span id="cb1-6"><a href></a>- incorrect assumptions about variables</span>
 <span id="cb1-7"><a href></a>- statistical modeling issues</span>
 <span id="cb1-8"><a href></a>- missing diagnostics or sensitivity checks</span>
-<span id="cb1-9"><a href></a>- places where the code runs but answers the wrong question</span>
-<span id="cb1-10"><a href></a></span>
-<span id="cb1-11"><a href></a>Do not rewrite the code yet. First give me a prioritized list of concerns with line references.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-9"><a href></a></span>
+<span id="cb1-10"><a href></a>Do not rewrite the code. Give me a list of concerns with line references and suggestions for fixing issues.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="second-pass-caveat" class="slide level2 center">
 <h2>Second-Pass Caveat</h2>
 <ul>
-<li class="fragment">A second model can catch errors, but it can also invent concerns.</li>
-<li class="fragment">Treat model review as triage, not validation.</li>
+<li class="fragment">A second model can catch errors, but it can also invent concerns that are not real.</li>
 <li class="fragment">Final checks still belong to the analyst: read the code, run it, inspect outputs, and verify against the scientific question.</li>
 </ul>
 </section>
-<section id="wrap-up" class="slide level2 smaller scrollable">
+<section id="wrap-up" class="slide level2 center">
 <h2>Wrap-Up</h2>
 <ul>
 <li class="fragment">Privacy is a workflow constraint, not an afterthought.</li>
@@ -1410,13 +1512,57 @@ Erik Westlund
 <li class="fragment">Simulated data support development, not final inference.</li>
 <li class="fragment">The analyst remains responsible for correctness, privacy, and interpretation.</li>
 </ul>
+</section></section>
+<section>
+<section id="section-13" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1></h1>
+<div style="color: white; font-size: 1.5em; text-align: center;">
+<p>Final Thoughts</p>
+</div>
+</section>
+<section id="reproducibility" class="slide level2 center">
+<h2>Reproducibility</h2>
+<ul>
+<li class="fragment">Use AI to generate code, not to do the analysis</li>
+<li class="fragment">Ensure future users/viewers of your code require zero AI support to work with your project.</li>
+</ul>
+</section>
+<section id="master-your-tools" class="slide level2 center">
+<h2>Master Your Tools</h2>
+<ul>
+<li class="fragment"><p>Learn version control software so you can:</p>
+<ul>
+<li class="fragment">Use it to enforce data from ending up cloud repositories</li>
+<li class="fragment">Commit changes frequently so you can revert when the AI makes mistakes</li>
+</ul></li>
+<li class="fragment"><p>Study what the LLM does so you can improve your understanding of technologies you use</p></li>
+<li class="fragment"><p>Invest in learning your tools. It will make you a better analyst and better able to harness AI tools</p></li>
+</ul>
+</section>
+<section id="you-are-responsible" class="slide level2 center">
+<h2>You Are Responsible</h2>
+<ul>
+<li class="fragment">Disclose AI use where required.</li>
+<li class="fragment">You are responsible for privacy, correctness, interpretation of your work.</li>
+</ul>
+</section></section>
+<section id="contact" class="title-slide slide level1 center">
+<h1>Contact</h1>
+<ul>
+<li class="fragment">Reach out with questions: ewestlund@jhu.edu</li>
+<li class="fragment">Thank you!</li>
+</ul>
+</section>
+
+<section id="references" class="title-slide slide level1 smaller scrollable">
+<h1>References</h1>
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-gloaguen2026agentsmd" class="csl-entry" role="listitem">
 Gloaguen, Thibaud, Niels Mündler, Mark Müller, Veselin Raychev, and Martin Vechev. 2026. <em>Evaluating <span class="nocase">AGENTS.md</span>: Are Repository-Level Context Files Helpful for Coding Agents?</em> <a href="https://arxiv.org/abs/2602.11988">https://arxiv.org/abs/2602.11988</a>.
 </div>
 </div>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
